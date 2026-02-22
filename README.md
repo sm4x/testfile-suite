@@ -2,7 +2,7 @@
 A lightweight, fast, and customizable command-line tool for generating hierarchical test-file directories. 
 
 ## Overview
-`testfile-suite` is designed to rapidly build out mock directory structures populated with randomized Base64-encoded text files. It is highly configurable, allowing developers to simulate complex file system scenarios for testing I/O, recursion performance, backup tools, or directory traversing scripts.
+`testfile-suite` is designed to rapidly build out mock directory structures populated with randomized Base64-encoded text files. It is configurable, allowing developers to simulate complex file system scenarios for testing I/O, recursion performance, backup tools, or directory traversing scripts.
 
 ## Usage
 The tool runs off a single python script (`main.py`) which acts as the entry point and accepts several configuration parameters to shape the output tree. 
