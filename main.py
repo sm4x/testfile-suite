@@ -15,7 +15,7 @@ def create_file(base_path, current_level, i, file_size_kb=1):
                                         Note: Base64 encoding inflates the size by ~33%, so 
                                         the random byte count is calculated before encoding.
     """
-    
+
     # Construct the parameterized file name
     file_name = f"file_{current_level}_{i}.txt"
     file_path = os.path.join(base_path, file_name)
@@ -27,6 +27,7 @@ def create_file(base_path, current_level, i, file_size_kb=1):
     # Write the base64 string to the target file
     with open(file_path, 'w') as f:
         f.write(b64_content)
+
 
 def create_structure(base_path, depth, breadth, file_size_kb=1, current_level=1):
     """
