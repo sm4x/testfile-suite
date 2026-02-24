@@ -29,7 +29,7 @@ def create_file(base_path, current_level, i, file_size_kb=1):
         f.write(b64_content)
 
 
-def create_structure(base_path, depth, breadth, file_size_kb=1, current_level=1):
+def create_structure(base_path, depth=3, breadth=3, file_size_kb=1, current_level=1):
     """
     Recursively generates a hierarchical tree of directories and files.
     
@@ -67,10 +67,10 @@ def main():
     parser = argparse.ArgumentParser(description="Test file tree structure generator")
     
     # Define the expected command-line arguments
-    parser.add_argument('--depth', type=int, default=3, required=True, 
-                        help='Depth of the recursive tree (how many sub-folders deep it goes)')
-    parser.add_argument('--breadth', type=int, default=3, required=True, 
-                        help='Number of files and folders to create at each level of the tree')
+    parser.add_argument('--depth', type=int, default=5, 
+                        help='Depth of the recursive tree (how many sub-folders deep it goes, default = 5)')
+    parser.add_argument('--breadth', type=int, default=5, 
+                        help='Number of files and folders to create at each level of the tree, default = 5')
     parser.add_argument('--size', type=float, default=1.0, 
                         help='Target size of each generated text file in KB (default: 1.0)')
     parser.add_argument('--path', type=str, default='.', 
